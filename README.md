@@ -14,34 +14,32 @@ Unit 8: Group Milestone - README Example
 
 ## Overview
 ### Description
-Tracks what music an individual listens to, and pairs them with others based on that music. Could be potentially used as a dating app, or just meeting new friends with similar music tastes.
+A productivity app that shares activities with friends and family members, and inspriring the participants by monitoring and reminding them. Could be a standalone app or integrated with a social media app.
 
 ### App Evaluation
-- **Category:** Social Networking / Music
-- **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer, such as tinder or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
-- **Story:** Analyzes users music choices, and connects them to other users with similar choices. The user can then decide to message this person and befriend them if wanted.
-- **Market:** Any individual could choose to use this app, and to keep it a safe environment, people would be organized into age groups.
-- **Habit:** This app could be used as often or unoften as the user wanted depending on how deep their social life is, and what exactly they're looking for.
-- **Scope:** First we would start with pairing people based on music taste, then perhaps this could evolve into a music sharing application as well to broaden its usage. Large potential for use with spotify, apple music, or other music streaming applications.
+- **Category:** Productivity / Social Networking
+- **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer. Functionality wouldn't be limited to mobile devices, however mobile version could more emphasized due to the mobility.
+- **Story:** Share activities, and invite people with same interest. The user can remind each other based on the goal and setting.
+- **Market:** Any individual could choose to use this app, and people would be organized into interest groups potentially to be interested in similar activities in the future.
+- **Habit:** This app could be used as often or unoften as the user wanted depending on how committed they are to the participating activities, and what exactly they're looking for.
+- **Scope:** First we would start with inviting people based on invite code, then perhaps it could evolve towards a social networking app by having a friend list.
+
 
 ## Product Spec
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
 
-* User logs in to access previous chats and preference settings
-* User picks what their favorite artist/genre/etc. (Think Spotify interface)
-* Matches have a chat window to get to know each other, with the ability to skip music and unmatch (Tinder Style).
-* Profile pages for each user
-* Settings (Accesibility, Notification, General, etc.)
+* User logs in to access user information
+* Create activities that will be shared to other people.
+* Create group by inviting other people to join the activity. (Label by tag?)
+* Set reminder and send notification for the participants based on activity setting.
 
 **Optional Nice-to-have Stories**
 
-* Log of past songs/people with album art covers matching
-* Page of most played songs (i.e. songs that most users are connecting through)
-* Profile Add-On: Top music choices, etc.
-* Optional Shuffle Button (i.e. random encounter/random song)
-* Listening/Encounter Queue
+* Ability to visit the screen with a table for previously completed activities.
+* Badge award for milestones
+* More detailed timer to track activities.
 
 ### 2. Screen Archetypes
 
