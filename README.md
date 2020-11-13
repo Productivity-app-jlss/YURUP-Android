@@ -1,11 +1,7 @@
-Unit 8: Group Milestone - README Example
+Unit 8: Group Milestone 
 ===
 
-:::info
-**Below is an example** of what your **Group Project README** should include and how it should be structured for the **Unit 8 Group Milestone Submission**.
-:::
-
-# TUNIN
+# ***App Name***
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -72,10 +68,10 @@ A productivity app that shares activities with friends and family members, and i
 
 
 ## Wireframes
-<img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
+<img src="https://github.com/lusenyang/initialize-with-README/blob/main/wireframe.jpg" width=800><br>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/lYHn37F.jpg" height=200>
+<img src="https://github.com/lusenyang/initialize-with-README/blob/main/digital%20wireframe%20%26%20mockups.jpg" height=200>
 
 ### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
+<img src="https://github.com/lusenyang/initialize-with-README/blob/main/walkthrough.gif" width=200>
