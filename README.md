@@ -54,7 +54,7 @@ A productivity app that shares activities with friends and family members, and i
 * Activity detail Screen.
    * Allows user to see all the participants and join code.
    
----
+Optional:
 * Register - User logs into their account
    * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person.
 
@@ -67,7 +67,7 @@ A productivity app that shares activities with friends and family members, and i
 * Profile
 
 Optional:
-* ...
+
 
 **Flow Navigation** (Screen to Screen)
 * Forced Log-in -> Account creation if no log in is available
@@ -75,8 +75,7 @@ Optional:
 * Create new activites if there's no exsiting ones.
 * Join activities with join code if an exsiting activity is shared.
 * Edit profile under profile setting
--
-*  
+
 
 ## Wireframes
 <img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
