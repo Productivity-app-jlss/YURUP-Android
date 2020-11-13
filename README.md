@@ -65,6 +65,8 @@ A productivity app that shares activities with friends and family members, and i
 * Create new activites if there's no exsiting ones.
 * Join existing activities with join code.
 * Edit profile under profile setting
+* Following figma project displays the prototype:
+https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=0%3A1
 
 
 ## Wireframes
