@@ -48,7 +48,7 @@ A productivity app that shares activities with friends and family members, and i
 * Home Screen - a list of activities the user has been participating.
    * Upon selecting a activity, the user should be able to see the activity details.
 * Create Activity
-   * User will be able to create activities with basic information.
+   * User will be able to create activities with basic information, or join a activity with a join code.
 * Profile Screen 
    * Allows user to upload user information.
 * Activity detail Screen.
@@ -62,14 +62,12 @@ A productivity app that shares activities with friends and family members, and i
 * Create
 * Profile
 
-Optional:
-
 
 **Flow Navigation** (Screen to Screen)
 * Forced Log-in -> Account creation if no log in is available
 * View activities in home screen
 * Create new activites if there's no exsiting ones.
-* Join activities with join code if an exsiting activity is shared.
+* Join existing activities with join code.
 * Edit profile under profile setting
 
 
