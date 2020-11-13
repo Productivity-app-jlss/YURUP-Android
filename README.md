@@ -53,10 +53,6 @@ A productivity app that shares activities with friends and family members, and i
    * Allows user to upload user information.
 * Activity detail Screen.
    * Allows user to see all the participants and join code.
-   
-Optional:
-* Register - User logs into their account
-   * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person.
 
 ### 3. Navigation
 
