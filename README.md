@@ -1,7 +1,8 @@
 Unit 8: Group Milestone 
 ===
 
-# ***App Name***
+# ***YURUP***
+This is a temporary app name
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -10,15 +11,15 @@ Unit 8: Group Milestone
 
 ## Overview
 ### Description
-A productivity app that shares activities with friends and family members, and insprires the participants by monitoring and reminding them the joined activities. Could be a standalone app or integrated with a social media app.
+YURUP, is a mobile productivity application that keeps track of the users' goals. This app allows the user to invite friends and family members to join a goal/challenge they have created. Through the app, users can send reminders to friends/family members to keep up with the challenge they committed to. It is like checking in with your close ones to see how they are doing and are they keeping up with their goals. In a rough time, like now, the productivity level is low. This application will help increase productivity and bring a sense of support from friends and family.
 
 ### App Evaluation
 - **Category:** Productivity / Social Networking
 - **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer. Functionality wouldn't be limited to mobile devices, however mobile version could more emphasized due to the mobility.
-- **Story:** Share activities, and invite people with same interest. The users can remind each other based on the goal and setting.
-- **Market:** Any individual could choose to use this app, and people would be organized into interest groups potentially to be interested in similar activities in the future.
-- **Habit:** This app could be used as often or unoften as the user wanted depending on how committed they are to the participating activities, and what exactly they're looking for.
-- **Scope:** First we would start with inviting people based on invite code, then perhaps it could evolve towards a social networking app by having a friend list and shared activities.
+- **Story:** Sharing goals/challenges, inviting people to participate in a challenge that was created, Reminding each other to complete the challenge.
+- **Market:** It can be used by anyone that would like to achieve a goal/ challenge. The user can choose to invite others to join the challenge so that they can support and motivate each other to accomplish their mutual goals. User doesn't have to share their goals. 
+- **Habit:** This app could be used as often or unoften as the user wanted depending on how many challenges (ongoing) they have created for themselves or with their friends/ family members. 
+- **Scope:** In the beginning stage of creating this app, it will allow the user to create short term goals and check them off their list. In the next stage, it will allow the user to create a daily/weekly/monthly challenge which means the user would need to check off that they accomplished the challenge of the day/week/month. Afterward, we will implement more stretch stories for the application, such as badges for the milestone, a timer .. etc
 
 
 ## Product Spec
@@ -26,29 +27,31 @@ A productivity app that shares activities with friends and family members, and i
 
 **Required Must-have Stories**
 
-* User logs in to access user information
-* Create activities that will be shared to other people.
-* Create group by inviting other people to join the activity by invite code.
-* Update and edit activity information
-* Set reminder and send notification for the participants based on activity setting.
+* User login and access their information
+* Create a challenge/goal 
+* Instead of creating a challenge, user can join a created challenge with an invition code.
+* Categorizing the challenges
+* Allow user to edit the challenge/goals details
+* Set reminder and send notification to participants reminding them to keep up with their goals .
 
 **Optional Nice-to-have Stories**
 
-* Ability to visit the screen with a table for previously completed activities.
-* Badge award for milestones
-* More detailed timer to track activities.
+* Create an activity page with the history of completed activities.
+* Badge award for the milestones
+* Implement a detailed timer to keep track of their challenges/goals.
 
 ### 2. Screen Archetypes
 
 * Login 
-* Home Screen - a list of activities the user has been participating.
-   * Upon selecting a activity, the user should be able to see the activity details.
-* Create Activity
-   * User will be able to create activities with basic information, or join a activity with a join code.
+* Home Screen - a list of goals/challenges the user has been participating in. 
+   * User can select what goals/challenges they have completed
+* Create Challenge 
+   * User can create a challenge with basic information or 
+   * User can join a challenge that has been made (with an invitation code)
 * Profile Screen 
-   * Allows user to upload user information.
+   * Allows user to update their profile information 
 * Activity detail Screen.
-   * Allows user to see all the participants and join code.
+   * Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code? 
 
 ### 3. Navigation
 
