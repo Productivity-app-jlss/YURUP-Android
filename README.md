@@ -146,6 +146,6 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
 - Login Screen
   |HTTP Verb|Endpoint|Description|
   |---|---|---|
-  |`Post`|||
+  |`Post`|/login|queries user table and verifies the credentials, routes to that user's home page|
 
   
