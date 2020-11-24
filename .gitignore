@@ -12,6 +12,7 @@
 /captures
 .externalNativeBuild
 .cxx
+<<<<<<< HEAD
 /.idea/
 .idea/gradle.xml
 .idea/jarRepositories.xml
@@ -19,3 +20,5 @@
 /.idea/jarRepositories.xml
 .idea*
 
+=======
+>>>>>>> main
