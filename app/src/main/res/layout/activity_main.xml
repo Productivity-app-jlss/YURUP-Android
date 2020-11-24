@@ -16,6 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            android:foregroundGravity="right"
+            app:buttonGravity="bottom"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -23,11 +25,50 @@
     <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:background="@drawable/ic_floatbtn_main"
+        android:backgroundTint="#F9F9F9"
+        app:srcCompat="@drawable/ic_floatbtn_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="90dp"
+        android:clickable="true"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        app:backgroundTint="#F9F9F9"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_floatbtn_create"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="155dp"
+        android:clickable="true"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        app:backgroundTint="#F9F9F9"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_floatbtn_join"
+        app:useCompatPadding="true" />
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
