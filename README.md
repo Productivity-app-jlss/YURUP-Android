@@ -76,10 +76,10 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
 <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/YURUP_digital_wireframe_mockup.png" height=700>
+<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
 
 ### [BONUS] Interactive Prototype
-<img src="https://github.com/lusenyang/initialize-with-README/blob/main/walkthrough.gif" width=200>
+<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/appWalkthrough1.gif" width=200>
 
 # Schema
 ## Models
