@@ -77,14 +77,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent join_activity = new Intent(getApplicationContext(), joinActivity.class);
                 startActivity(join_activity);
             }
-    
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        });
+
+        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item){
                 Fragment fragment;
-                switch (menuItem.getItemId()) {
+                switch (item.getItemId()) {
                     case R.id.action_profile:
                         Toast.makeText(MainActivity.this, "profile", Toast.LENGTH_SHORT).show();
                         fragment = new ProfileFragment();
@@ -97,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
                 return true;
             }
-        });
+            });
 
-        // Set default selection
+            // Set default selection
         bottomNavigationView.setSelectedItemId(R.id.action_home);
 
 
@@ -114,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
-    }
 
+        }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
