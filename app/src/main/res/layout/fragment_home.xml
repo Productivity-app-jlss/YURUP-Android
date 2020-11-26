@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yurupAppBG"
     tools:context=".Fragments.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appName"
         android:layout_width="240dp"
         android:layout_height="50dp"
         android:layout_marginStart="95dp"
@@ -26,7 +28,7 @@
             app:cardElevation="0dp">
 
             <TextView
-                android:id="@+id/appName"
+                android:id="@+id/appNameText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="0dp"
@@ -44,6 +46,7 @@
         android:id="@+id/rvChallenges"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:layout_marginTop="80dp"/>
 
 </FrameLayout>

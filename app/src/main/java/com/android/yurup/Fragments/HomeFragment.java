@@ -1,6 +1,7 @@
 package com.android.yurup.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.yurup.Challenge;
 import com.android.yurup.ChallengeAdapter;
 import com.android.yurup.R;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,12 +55,30 @@ public class HomeFragment extends Fragment {
         // set layout manager on recycler view
         rvChallenges.setLayoutManager(new LinearLayoutManager(getContext()));
 
-//        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NavHostFragment.findNavController(HomeFragment.this)
-//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-//            }
-//        });
+        queryChallenges();
+    }
+
+
+    protected void queryChallenges() {
+        // Specify which class to query
+        ParseQuery<Challenge> query = ParseQuery.getQuery(Challenge.class);
+        query.include(Challenge.KEY_TITLE);
+        query.setLimit(20);
+        query.addAscendingOrder(Challenge.KEY_END_DATE);
+        query.findInBackground(new FindCallback<Challenge>() {
+            @Override
+            public void done(List<Challenge> challenges, ParseException e) {
+                if(e !=null){
+                    Log.e(TAG, "Error in getting challenges: ", e);
+                    return;
+                }
+                for(Challenge challenge: challenges){
+                    Log.i(TAG, "Challenges: " + challenge.getDescription() + ", title: " + challenge.getTitle());
+                }
+
+                allChallenges.addAll(challenges);
+                adapter.notifyDataSetChanged();
+            }
+        });
     }
 }
