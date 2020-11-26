@@ -1,4 +1,4 @@
-package com.example.yurup;
+package com.android.yurup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -50,8 +50,15 @@ public class LoginActivity extends AppCompatActivity {
 //            @Override
 //            public void onClick(View view) {
 //                ParseUser.logOut();
+//                logout();
 //            }
 //        });
+//
+//        private void logout() {
+//            Intent i = new Intent(this, LoginActivity.class);
+//            startActivity(i);
+//            finish();
+//        }
 
 
     }
