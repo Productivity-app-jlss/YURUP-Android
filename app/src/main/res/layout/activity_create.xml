@@ -9,7 +9,7 @@
     android:layout_marginRight="20dp"
     android:layout_marginBottom="20dp"
     android:orientation="vertical"
-    tools:context=".createActivity">
+    tools:context=".CreateActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -76,5 +76,12 @@
         android:layout_height="wrap_content"
         android:text="CREATE" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/yurupThemeColor"
+        app:menu="@menu/menu_bottom_navigation" />
 
 </LinearLayout>
