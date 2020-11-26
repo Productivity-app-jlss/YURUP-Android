@@ -76,7 +76,76 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
 <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/YURUP_digital_wireframe_mockup.png" height=700>
+<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
 
 ### [BONUS] Interactive Prototype
-<img src="https://github.com/lusenyang/initialize-with-README/blob/main/walkthrough.gif" width=200>
+<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/appWalkthrough1.gif" width=200>
+
+# Schema
+## Models
+**User**
+|Property|Type|Description|
+|---|---|---|
+|u_id|String|unique id for the user|
+|username|String|unique string for user to log in|
+|password|Character|array of characters for user to log in|
+|profile picture|File|image for the user profile|
+
+**Challenge**
+|Property|Type|Description|
+|---|---|---|
+|c_id|String|unique id for a challenge activity|
+|description|String|activity description|
+|titile|String|activity title|
+|startDate|DateTime|date and time when the activity starts|
+|endDate|DateTime|date and time when the activity is completed|
+|joinCode|String|code for joining an existing activity|
+|status|String|current activity status|
+|creator|String|host user of an activity|
+|isActive|Boolean|whether the activity is active|
+
+**Participant**
+|Property|Type|Description|
+|---|---|---|
+|userId|String|unique id for the user|
+|challengeId|String|unique id for a challenge activity|
+|status|String|current activity status|
+
+
+## Networking
+
+- Home Screen
+
+  |HTTP Verb|Endpoint|Description|
+  |---|---|---|
+  |`Get`|/home|query/populates list of all challenge activities created and joined|
+  |`Put`|/updateChallenge/c_id|update the challenge activity status on the post|
+  |`Delete`|/deleteChallenge/c_id|delete an existing challenge (stretch story)|
+  
+- Create Challenge
+  |HTTP Verb|Endpoint|Description|
+  |---|---|---|
+  |`Post`|/createChallenge|create a new entry on the challenge table and join it immediately|
+  
+- Join Challenge
+  |HTTP Verb|Endpoint|Description|
+  |---|---|---|
+  |`Post`|/joinChallenge/joinCode|adds a new entry to the participant table|
+  
+- Detail Page
+  |HTTP Verb|Endpoint|Description|
+  |---|---|---|
+  |`Put`|/detailChallenge/c_id|update the information of the challenge activity|
+  
+- Profile (Stretch)
+  |HTTP Verb|Endpoint|Description|
+  |---|---|---|
+  |`Get`|/profile|query the current user object|
+  |`Put`|/updateProfile/u_id|update the information of the challenge activity|
+
+- Login Screen
+  |HTTP Verb|Endpoint|Description|
+  |---|---|---|
+  |`Post`|/login|queries user table and verifies the credentials, routes to that user's home page|
+
+  

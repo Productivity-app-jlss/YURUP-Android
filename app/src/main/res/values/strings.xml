@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">YURUP</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Home Fragment</string>
+    <string name="profile_fragment_label">Profile Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="submit">Complete</string>
+
+    <string name="text_font">sans-serif-medium</string>
+
 </resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yurupAppBG"
+    tools:context=".Fragments.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appNameProf"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            app:cardBackgroundColor="@color/yurupThemeColor"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="YURUP"
+                android:textAlignment="center"
+                android:textColor="@color/yurupTextColor"
+                android:textSize="36dp" />
+        </androidx.cardview.widget.CardView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardPic"-->
+<!--            android:layout_width="170dp"-->
+<!--            android:layout_height="170dp"-->
+<!--            app:cardCornerRadius="85dp"-->
+<!--            android:layout_marginStart="130dp"-->
+<!--            android:layout_marginTop="130dp"-->
+<!--            >-->
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="130dp"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/c_360"
+                android:background="@drawable/custom_rounded_corners"
+                tools:src="@drawable/c_360" />
+<!--        </androidx.cardview.widget.CardView>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name:"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="60dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/yurupThemeColor"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardUserName"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="7dp"
+            app:cardBackgroundColor="@color/yurupCardColor"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Shubham123"
+                android:textSize="18dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/yurupThemeColor"
+                />
+        </androidx.cardview.widget.CardView>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Password:"-->
+<!--            android:textSize="18dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginStart="60dp"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:textColor="@color/yurupThemeColor"-->
+<!--            />-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardPassword"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            android:layout_marginStart="55dp"-->
+<!--            android:layout_marginTop="7dp"-->
+<!--            app:cardBackgroundColor="@color/yurupCardColor"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="**********"-->
+<!--                android:textSize="18dp"-->
+<!--                android:layout_marginTop="7dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:fontFamily="sans-serif-medium"-->
+<!--                android:textColor="@color/yurupThemeColor"-->
+<!--                />-->
+<!--        </androidx.cardview.widget.CardView>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Password:"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="60dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/yurupThemeColor"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNewPassword"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="7dp"
+            app:cardBackgroundColor="@color/yurupCardColor"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="**********"
+                android:textSize="18dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/yurupThemeColor"
+                />
+        </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:background="@drawable/custom_rounded_corners"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/yurupThemeColor"
+                android:textColor="@color/yurupTextColor"
+                android:layout_marginStart="212dp"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
