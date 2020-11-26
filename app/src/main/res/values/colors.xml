@@ -6,7 +6,8 @@
     <color name="yurupThemeColor">#4b4e6d</color>
     <color name="yurupTextColor">#CAF4BA</color>
     <color name="yurupLineColor">#C0D7C8</color>
-    <color name="yurupAppBG">#E5E5E5</color>
+    <color name="yurupAppBG">#F6FBF7</color>
     <color name="yurupCardColor">#DDF1E4</color>
+    <color name="statusColor">#6A8D92</color>
     <color name="white">#FFF</color>
 </resources>
