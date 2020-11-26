@@ -6,22 +6,19 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.yurup.Animation;
 import com.android.yurup.Challenge;
 import com.android.yurup.ChallengeAdapter;
-import com.android.yurup.MainActivity;
 import com.android.yurup.R;
 
-import com.android.yurup.createActivity;
-import com.android.yurup.joinActivity;
+import com.android.yurup.CreateActivity;
+import com.android.yurup.JoinActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.parse.FindCallback;
@@ -96,7 +93,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.this, "Create challenge", Toast.LENGTH_SHORT).show();
-                Intent create_activity = new Intent(getApplicationContext(), createActivity.class);
+                Intent create_activity = new Intent(getApplicationContext(), CreateActivity.class);
                 startActivity(create_activity);
             }
         });
@@ -105,7 +102,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.this, "Join challenge", Toast.LENGTH_SHORT).show();
-                Intent join_activity = new Intent(getApplicationContext(), joinActivity.class);
+                Intent join_activity = new Intent(getApplicationContext(), JoinActivity.class);
                 startActivity(join_activity);
             }
         });
