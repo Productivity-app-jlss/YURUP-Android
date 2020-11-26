@@ -9,10 +9,11 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appNameProf"
-        android:layout_width="240dp"
+        android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="20dp"
         android:background="@android:color/transparent"
@@ -23,12 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
+            android:textAlignment="center"
             app:cardBackgroundColor="@color/yurupThemeColor"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp">
 
+
             <TextView
-                android:id="@+id/appName"
+                android:id="@+id/appNameText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="0dp"
@@ -166,9 +169,9 @@
                 android:layout_height="wrap_content"
                 android:text="Update"
                 android:background="@drawable/custom_rounded_corners"
+                android:backgroundTint="@color/yurupThemeColor"
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginTop="15dp"
-                android:backgroundTint="@color/yurupThemeColor"
                 android:textColor="@color/yurupTextColor"
                 android:layout_marginStart="212dp"/>
 

@@ -3,12 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_home"
-        android:icon="@drawable/instagram_home_outline_24"
-        android:title="Home"
+        android:icon="@drawable/ic_home_logo"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_profile"
-        android:icon="@drawable/instagram_user_outline_24"
-        android:title="Profile"
+        android:icon="@drawable/ic_profile_logo"
         app:showAsAction="always" />
 </menu>

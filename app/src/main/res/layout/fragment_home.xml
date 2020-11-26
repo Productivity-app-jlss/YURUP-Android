@@ -9,10 +9,11 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appName"
-        android:layout_width="240dp"
+        android:layout_width="140dp"
         android:layout_height="50dp"
+        android:layout_gravity="center|top"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="20dp"
         android:background="@android:color/transparent"
@@ -23,9 +24,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
+            android:textAlignment="center"
             app:cardBackgroundColor="@color/yurupThemeColor"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp">
+
 
             <TextView
                 android:id="@+id/appNameText"
@@ -43,20 +46,22 @@
 
 
     </com.google.android.material.appbar.AppBarLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvChallenges"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"
-        android:layout_marginTop="80dp"/>
-
+        android:layout_height="673dp"
+        android:layout_marginTop="130dp"
+        android:padding="8dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="35dp"
         android:background="@drawable/ic_floatbtn_main"
         android:backgroundTint="#F9F9F9"
         app:srcCompat="@drawable/ic_floatbtn_main" />
