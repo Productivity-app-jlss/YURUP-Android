@@ -27,31 +27,31 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 
 **Required Must-have Stories**
 
-* User login and access their information
-* Create a challenge/goal 
-* Instead of creating a challenge, user can join a created challenge with an invition code.
-* Categorizing the challenges
-* Allow user to edit the challenge/goals details
-* Set reminder and send notification to participants reminding them to keep up with their goals .
+[] User login and access their information
+[] Create a challenge/goal 
+[] Instead of creating a challenge, user can join a created challenge with an invitation code.
+[] Categorizing the challenges
+[] Allow user to edit the challenge/goals details
+[] Set reminder and send notification to participants reminding them to keep up with their goals .
 
 **Optional Nice-to-have Stories**
 
-* Create an activity page with the history of completed activities.
-* Badge award for the milestones
-* Implement a detailed timer to keep track of their challenges/goals.
+[] Create an activity page with the history of completed activities.
+[] Badge award for the milestones
+[] Implement a detailed timer to keep track of their challenges/goals.
 
 ### 2. Screen Archetypes
 
-* Login 
-* Home Screen - a list of goals/challenges the user has been participating in. 
-   * User can select what goals/challenges they have completed
-* Create Challenge 
-   * User can create a challenge with basic information or 
-   * User can join a challenge that has been made (with an invitation code)
-* Profile Screen 
-   * Allows user to update their profile information 
-* Activity detail Screen.
-   * Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code? 
+[X] Login 
+[X] Home Screen - a list of goals/challenges the user has been participating in. 
+   [] User can select what goals/challenges they have completed
+[X] Create Challenge 
+   [] User can create a challenge with basic information or 
+   [] User can join a challenge that has been made (with an invitation code)
+[X] Profile Screen 
+   [] Allows user to update their profile information 
+[] Activity detail Screen.
+   []Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code? 
 
 ### 3. Navigation
 
@@ -70,16 +70,6 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 * Edit profile under profile setting
 * Following figma project displays the prototype:
 https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=0%3A1
-
-
-## Wireframes
-<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
-
-### [BONUS] Digital Wireframes & Mockups
-<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
-
-### [BONUS] Interactive Prototype
-<img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/appWalkthrough1.gif" width=200>
 
 # Schema
 ## Models
@@ -148,4 +138,15 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
   |---|---|---|
   |`Post`|/login|queries user table and verifies the credentials, routes to that user's home page|
 
+  ##  Current build process 
+  <img src="add in the gif" width=200><br>
   
+  ## Wireframes
+  <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
+  
+  ### [BONUS] Digital Wireframes & Mockups
+  <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
+  
+  ### [BONUS] Interactive Prototype
+  <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/appWalkthrough1.gif" width=200>
+
