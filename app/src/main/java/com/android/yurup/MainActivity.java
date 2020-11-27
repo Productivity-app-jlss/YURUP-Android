@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setSupportActionBar((Toolbar) findViewById(R.id.Toolbar));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
 
