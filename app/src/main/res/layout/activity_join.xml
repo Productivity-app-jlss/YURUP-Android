@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".JoinActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +40,7 @@
     <EditText
         android:id="@+id/tvCode"
         app:layout_constraintTop_toBottomOf="@id/Toolbar"
-        app:layout_constraintBottom_toTopOf="@id/btnJoin"
+        app:layout_constraintBottom_toTopOf="@id/tvjoin"
         android:layout_width="300dp"
         android:layout_margin="50dp"
         android:layout_height="40dp"
@@ -51,8 +50,21 @@
         android:ems="10"
         android:hint="Enter challege code"
         android:inputType="textPersonName" />
+    <TextView
+        android:id="@+id/tvjoin "
+        android:layout_width="329dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="30dp"
+        android:text="CODE:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+
+<Button
         android:id="@+id/btnJoin"
         android:layout_width="150dp"
         android:layout_margin="50dp"
@@ -76,7 +88,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
         android:background="@color/yurupThemeColor"
-        app:menu="@menu/menu_bottom_navigation" />
+        android:paddingTop="9dp"
+        app:itemIconSize="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
