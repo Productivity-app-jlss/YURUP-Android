@@ -22,7 +22,6 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 - **Scope:** In the beginning stage of creating this app, it will allow the user to create short term goals and check them off their list. In the next stage, it will allow the user to create a daily/weekly/monthly challenge which means the user would need to check off that they accomplished the challenge of the day/week/month. Afterward, we will implement more stretch stories for the application, such as badges for the milestone, a timer .. etc
 
 
-## Product Spec
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
@@ -42,13 +41,13 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 
 ### 2. Screen Archetypes
 
-[X] Login 
-[X] Home Screen - a list of goals/challenges the user has been participating in. 
+[x] Login 
+[x] Home Screen - a list of goals/challenges the user has been participating in. 
    [] User can select what goals/challenges they have completed
-[X] Create Challenge 
+[x] Create Challenge 
    [] User can create a challenge with basic information or 
    [] User can join a challenge that has been made (with an invitation code)
-[X] Profile Screen 
+[x] Profile Screen 
    [] Allows user to update their profile information 
 [] Activity detail Screen.
    []Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code? 
@@ -57,9 +56,9 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 
 **Tab Navigation** (Tab to Screen)
 
-* Home
-* Create
-* Profile
+[x] Home
+[x] Create
+[x] Profile
 
 
 **Flow Navigation** (Screen to Screen)
@@ -137,12 +136,12 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
   |HTTP Verb|Endpoint|Description|
   |---|---|---|
   |`Post`|/login|queries user table and verifies the credentials, routes to that user's home page|
-
-  ##  Current build process 
-  <img src="add in the gif" width=200><br>
   
   ## Wireframes
   <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
+  
+  ## Progress
+  <img src="./walkthrough-yurup.gif" width=700><br>
   
   ### [BONUS] Digital Wireframes & Mockups
   <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
