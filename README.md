@@ -52,6 +52,7 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 - [] Activity detail Screen.
   - [] Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code? 
 
+
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
