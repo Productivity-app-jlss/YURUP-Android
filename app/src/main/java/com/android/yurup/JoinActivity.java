@@ -2,6 +2,7 @@ package com.android.yurup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -26,6 +27,8 @@ public class JoinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_join);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        setSupportActionBar((Toolbar) findViewById(R.id.Toolbar));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

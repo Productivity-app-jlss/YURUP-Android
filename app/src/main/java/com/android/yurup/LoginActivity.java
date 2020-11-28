@@ -1,6 +1,7 @@
 package com.android.yurup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        setSupportActionBar((Toolbar) findViewById(R.id.loginToolbar));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         if (ParseUser.getCurrentUser() != null) {
             goMainActivity();
