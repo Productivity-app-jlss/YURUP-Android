@@ -1,16 +1,16 @@
-package com.android.yurup;
+package com.android.yurup.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.parse.ParseFile;
+import com.android.yurup.Models.Challenge;
+import com.android.yurup.R;
 
 import java.util.List;
 
@@ -53,8 +53,8 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvTitle = itemView.findViewById(R.id.tvTitle);
-            tvDescription = itemView.findViewById(R.id.tvDescription);
+            tvTitle = itemView.findViewById(R.id.etTitle);
+            tvDescription = itemView.findViewById(R.id.etDescription);
             tvStatus = itemView.findViewById(R.id.tvStatus);
             tvDueDate = itemView.findViewById(R.id.tvDueDate);
             markStatus = itemView.findViewById(R.id.markStatus);
@@ -64,7 +64,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             tvTitle.setText(challenge.getTitle());
             tvDescription.setText(challenge.getDescription());
             tvStatus.setText(challenge.getHostStatus());
-            tvDueDate.setText(challenge.getEndDate());
+            tvDueDate.setText(challenge.getEnd());
         }
     }
 }

@@ -2,6 +2,7 @@ package com.android.yurup;
 
 import android.app.Application;
 
+import com.android.yurup.Models.Challenge;
 import com.parse.Parse;
 import com.parse.ParseObject;
 

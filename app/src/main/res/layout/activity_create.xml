@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/yurupAppBG"
-    tools:context=".CreateActivity">
+    tools:context=".challengeActivities.CreateActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appName"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/tvTitle"
+        android:id="@+id/etTitle"
         android:layout_width="353dp"
         android:layout_height="38dp"
         android:layout_marginTop="20dp"
@@ -85,10 +85,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
 
     <EditText
-        android:id="@+id/tvDescription"
+        android:id="@+id/etDescription"
         android:layout_width="348dp"
         android:layout_height="85dp"
         android:layout_marginTop="20dp"
@@ -105,7 +105,7 @@
         app:layout_constraintTop_toTopOf="@+id/tvthree" />
 
     <EditText
-        android:id="@+id/tvStartDate"
+        android:id="@+id/etStartDate"
         android:layout_width="150dp"
         android:layout_height="42dp"
         android:layout_marginStart="28dp"
@@ -128,10 +128,10 @@
         android:text="START DATE:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
     <EditText
-        android:id="@+id/tvEndDate"
+        android:id="@+id/etEndDate"
         android:layout_width="149dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
@@ -155,7 +155,7 @@
         android:text="END DATE:"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
     <Button
         android:id="@+id/btnCreate"
@@ -169,7 +169,7 @@
         android:text="CREATE"
         android:textColor="@color/yurupTextColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEndDate" />
+        app:layout_constraintTop_toBottomOf="@+id/etEndDate" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
