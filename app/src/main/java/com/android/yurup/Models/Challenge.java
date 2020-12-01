@@ -41,7 +41,7 @@ public class Challenge extends ParseObject {
     }
 
     public void setStart(String start){
-        put(KEY_TITLE, start);
+        put(KEY_START, start);
     }
 
     public String getStart() {
@@ -64,8 +64,8 @@ public class Challenge extends ParseObject {
         put(KEY_JOIN_CODE, joinCode);
     }
 
-    public void setCreator(ParseUser user){
-        put(KEY_CREATOR, user);
+    public void setCreator(ParseUser creator){
+        put(KEY_CREATOR, creator);
     }
 
     public ParseUser getCreator() {
