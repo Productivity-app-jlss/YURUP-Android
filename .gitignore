@@ -19,6 +19,10 @@
 /.idea/jarRepositories.xml
 .idea*
 .idea/*
+.idea
 .gradle/*
+.gradle
+.gradle*
 app/local.properties
+local.properties
 
