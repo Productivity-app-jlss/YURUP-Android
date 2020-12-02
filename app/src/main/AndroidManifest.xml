@@ -28,8 +28,8 @@
             android:theme="@style/AppTheme.YurupOverlay">
 
         </activity>
-        <activity android:name=".JoinActivity"></activity>
-        <activity android:name=".CreateActivity" />
+        <activity android:name=".challengeActivities.JoinActivity"></activity>
+        <activity android:name=".challengeActivities.CreateActivity" />
 
     </application>
 

@@ -12,13 +12,17 @@
 /captures
 .externalNativeBuild
 .cxx
-<<<<<<< HEAD
 /.idea/
 .idea/gradle.xml
 .idea/jarRepositories.xml
 /.idea/gradle.xml
 /.idea/jarRepositories.xml
 .idea*
+.idea/*
+.idea
+.gradle/*
+.gradle
+.gradle*
+app/local.properties
+local.properties
 
-=======
->>>>>>> main

@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.yurup.Animation;
-import com.android.yurup.Challenge;
-import com.android.yurup.ChallengeAdapter;
+import com.android.yurup.Models.Challenge;
+import com.android.yurup.Adapters.ChallengeAdapter;
 import com.android.yurup.R;
 
-import com.android.yurup.CreateActivity;
-import com.android.yurup.JoinActivity;
+import com.android.yurup.challengeActivities.CreateActivity;
+import com.android.yurup.challengeActivities.JoinActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.parse.FindCallback;
@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
         ParseQuery<Challenge> query = ParseQuery.getQuery(Challenge.class);
         query.include(Challenge.KEY_TITLE);
         query.setLimit(20);
-        query.addAscendingOrder(Challenge.KEY_END_DATE);
+        query.addAscendingOrder(Challenge.KEY_END);
         query.findInBackground(new FindCallback<Challenge>() {
             @Override
             public void done(List<Challenge> challenges, ParseException e) {
