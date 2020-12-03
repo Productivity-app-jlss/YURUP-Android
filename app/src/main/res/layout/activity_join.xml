@@ -54,7 +54,7 @@
         android:layout_width="329dp"
         android:layout_height="29dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="150dp"
         android:layout_marginRight="30dp"
         android:text="CODE:"
         android:textStyle="bold"
