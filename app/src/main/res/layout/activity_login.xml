@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/yurupAppBG"
+    tools:context=".challengeActivities.CreateActivity">
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="329dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="348dp"
+        android:layout_marginRight="30dp"
+        android:text="UserName:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="329dp"
+        android:layout_height="39dp"
+        android:background="@drawable/fill_in_text_rounded_color"
+        android:ems="10"
+        android:hint="   username"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="329dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:text="Password:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="329dp"
+        android:layout_height="39dp"
+        android:background="@drawable/fill_in_text_rounded_color"
+        android:ems="10"
+        android:hint="   password"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appName"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center|top"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="54dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:textAlignment="center"
+            app:cardBackgroundColor="@color/yurupThemeColor"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp">
+
+
+            <TextView
+                android:id="@+id/appNameText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="YURUP"
+                android:textAlignment="center"
+                android:textColor="@color/yurupTextColor"
+                android:textSize="36dp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="128dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:backgroundTint="@color/yurupThemeColor"
+        android:fontFamily="sans-serif-medium"
+        android:text="Login"
+        android:textColor="@color/yurupTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <ImageView
+        android:id="@+id/ivLoginicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        app:srcCompat="@drawable/ic_cuate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
