@@ -1,9 +1,13 @@
 package com.android.yurup.Models;
 
+import android.widget.ImageView;
+
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+
+import java.io.File;
 
 @ParseClassName("Challenge")
 public class Challenge extends ParseObject {
@@ -88,11 +92,12 @@ public class Challenge extends ParseObject {
         put(KEY_IS_ACTIVE, isActive);
     }
 
-//    public ParseFile getImage() {
-//        return getParseFile(KEY_IMAGE);
-//    }
 
-//    public void setImage(ParseFile image){
+//  public ParseFile getImage() {
+//       return getParseFile(KEY_IMAGE);
+//  }
+
+//  public void setImage(ParseFile image){
 //        put(KEY_IMAGE, image);
 //    }
 
