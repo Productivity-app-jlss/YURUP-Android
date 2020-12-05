@@ -19,6 +19,7 @@ import com.android.yurup.Models.Challenge;
 import com.android.yurup.Models.Participant;
 import com.android.yurup.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -84,9 +85,9 @@ public class JoinActivity extends AppCompatActivity {
 
     private void joinChallenge(ParseObject challenge, ParseUser currentUser, String status) {
         Participant participant = new Participant();
-        participant.setChallengeId(challenge);
+        participant.setChallenge(challenge);
         participant.setStatus(status);
-        participant.setParticipantId(currentUser);
+        participant.setParticipant(currentUser);
         participant.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
@@ -103,8 +104,9 @@ public class JoinActivity extends AppCompatActivity {
 
     protected Challenge getJoinedChallenge(final String joinCode) {
         // Specify which class to query
-        ParseQuery<Challenge> query = ParseQuery.getQuery("Challenge");
-        query.whereEqualTo("joinCode", joinCode);
+        ParseQuery<Challenge> query = ParseQuery.getQuery(Challenge.class);
+//        query.include(Challenge.KEY_JOIN_CODE);
+        query.whereEqualTo(Challenge.KEY_JOIN_CODE, joinCode);
         final Challenge[] joinedChallenge = {new Challenge()};
         query.getFirstInBackground(new GetCallback<Challenge>() {
             @Override

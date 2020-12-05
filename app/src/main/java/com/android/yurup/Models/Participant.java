@@ -17,19 +17,19 @@ public class Participant extends ParseObject {
             super(theClassName);
         }
 
-        public ParseObject getChallengeId() {
+        public ParseObject getChallenge() {
             return getParseObject(KEY_CHALLENGE);
         }
 
-        public void setChallengeId(ParseObject challenge){
+        public void setChallenge(ParseObject challenge){
             put(KEY_CHALLENGE, challenge);
         }
 
-        public ParseUser getParticipantId() {
+        public ParseUser getParticipant() {
             return getParseUser(KEY_PARTICIPANT);
         }
 
-        public void setParticipantId(ParseUser participant){
+        public void setParticipant(ParseUser participant){
             put(KEY_PARTICIPANT, participant);
         }
 
