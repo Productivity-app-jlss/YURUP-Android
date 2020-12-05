@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.yurup.DetailActivity;
+import com.android.yurup.EditActivity;
 import com.android.yurup.Models.Challenge;
 import com.android.yurup.R;
 
@@ -83,6 +84,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
                     //Toast.makeText(context, "detail info", Toast.LENGTH_SHORT).show();
                 }
             });
+
         }
 
 

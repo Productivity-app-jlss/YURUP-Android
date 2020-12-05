@@ -50,11 +50,11 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="342dp"
-        android:layout_height="188dp"
+        android:layout_width="347dp"
+        android:layout_height="207dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="150dp"
         android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
         app:cardBackgroundColor="@color/yurupCardColor"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,18 +66,51 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvTitle"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="TextView"
-                android:textColor="@color/yurupThemeColor"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="198dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="7dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="TextView"
+                    android:textColor="@color/yurupThemeColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/statusCard"
+                    android:layout_width="91dp"
+                    android:layout_height="26dp"
+                    android:layout_below="@+id/etDescription"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="40dp"
+                    android:textAlignment="center"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="8dp"
+                        android:text="COMPLETE"
+                        android:textAlignment="center"
+                        android:textColor="@color/statusColor" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tvDescription"
@@ -164,7 +197,7 @@
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btnEdit"
                     android:layout_width="1dp"
                     android:layout_height="38dp"
                     android:layout_marginTop="10dp"
