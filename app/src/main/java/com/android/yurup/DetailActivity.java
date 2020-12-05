@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,15 +27,22 @@ import com.parse.ParseUser;
 
 import org.parceler.Parcels;
 
+import static com.parse.Parse.getApplicationContext;
+
 public class DetailActivity extends AppCompatActivity {
+
+    public static final String KEY_ITEM_TEXT = "challenge_text";
+    public static final String KEY_ITEM_POSITION = "challenge_position";
+    public static final int EDIT_TEXT_CODE = 29;
 
     TextView tvTitle;
     TextView tvDescription;
     TextView tvCode;
     TextView tvStartDate;
     TextView tvEndDate;
+    TextView tvStatus;
     ImageView ivHost;
-
+    Button btnEdit;
     BottomNavigationView bottomNavigationView;
 
     final FragmentManager fragmentManager = getSupportFragmentManager();
@@ -48,6 +58,8 @@ public class DetailActivity extends AppCompatActivity {
         tvStartDate = findViewById(R.id.tvStartDate);
         tvEndDate = findViewById(R.id.tvEndDate);
         ivHost = findViewById(R.id.ivHost);
+        btnEdit = findViewById(R.id.btnEdit);
+        tvStatus =findViewById(R.id.tvStatus);
 
         Challenge challenge = Parcels.unwrap(getIntent().getParcelableExtra("challenge"));
         tvTitle.setText(challenge.getTitle());
@@ -55,6 +67,7 @@ public class DetailActivity extends AppCompatActivity {
         tvCode.setText(challenge.getJoinCode());
         tvStartDate.setText(challenge.getStart());
         tvEndDate.setText(challenge.getEnd());
+        tvStatus.setText(challenge.getHostStatus());
 /*
         ParseUser host = challenge.getCreator();
         ParseFile image= host(User).getImage();
@@ -85,11 +98,16 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent activity_edit = new Intent(getApplicationContext(), EditActivity.class);
+                startActivity(activity_edit);
+            }
+        });
 
     }
+
+
+
 }
