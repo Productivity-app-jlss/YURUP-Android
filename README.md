@@ -45,12 +45,12 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 - [x] Home Screen - a list of goals/challenges the user has been participating in. 
    - [] User can select what goals/challenges they have completed
 - [x] Create Challenge 
-  - [] User can create a challenge with basic information or 
+  - [X] User can create a challenge with basic information or
   - [] User can join a challenge that has been made (with an invitation code)
 - [x] Profile Screen 
   - [] Allows user to update their profile information 
-- [] Activity detail Screen.
-  - [] Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code? 
+- [X] Activity detail Screen.
+  - [X] Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code?
 
 
 ### 3. Navigation
@@ -142,7 +142,7 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
   <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
   
   ## Progress
-  <img src="./walkthrough-yurup.gif" width=200><br>
+  <img src="./weekly10.gif" width=200><br>
   
   ### [BONUS] Digital Wireframes & Mockups
   <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
