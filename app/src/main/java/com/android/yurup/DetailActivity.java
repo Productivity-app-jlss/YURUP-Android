@@ -1,12 +1,14 @@
 package com.android.yurup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +24,11 @@ import com.android.yurup.challengeActivities.JoinActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.parse.GetCallback;
+import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import org.parceler.Parcels;
@@ -30,7 +36,7 @@ import org.parceler.Parcels;
 import static com.parse.Parse.getApplicationContext;
 
 public class DetailActivity extends AppCompatActivity {
-
+    public static final String TAG = "detailActivity";
     public static final String KEY_ITEM_TEXT = "challenge_text";
     public static final String KEY_ITEM_POSITION = "challenge_position";
     public static final int EDIT_TEXT_CODE = 29;
@@ -38,7 +44,8 @@ public class DetailActivity extends AppCompatActivity {
     public static final String KEY_DESCRIPTION = "challenge_description";
     public static final String KEY_START = "challenge_start";
     public static final String KEY_END = "challenge_end";
-
+    public static final String KEY_ID = "challenge_objectID";
+    public static final int REQUESTCODE = 100;
 
     TextView tvTitle;
     TextView tvDescription;
@@ -65,7 +72,7 @@ public class DetailActivity extends AppCompatActivity {
         tvEndDate = findViewById(R.id.tvEndDate);
         ivHost = findViewById(R.id.ivHost);
         btnEdit = findViewById(R.id.btnEdit);
-        tvStatus =findViewById(R.id.tvStatus);
+        tvStatus = findViewById(R.id.tvStatus);
 
         this.challenge = Parcels.unwrap(getIntent().getParcelableExtra("challenge"));
         tvTitle.setText(challenge.getTitle());
@@ -89,7 +96,7 @@ public class DetailActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment;
                 switch (item.getItemId()) {
                     case R.id.action_profile:
@@ -114,13 +121,38 @@ public class DetailActivity extends AppCompatActivity {
                 activity_edit.putExtra(KEY_START, DetailActivity.this.challenge.getStart());
                 activity_edit.putExtra(KEY_END, DetailActivity.this.challenge.getEnd());
                 activity_edit.putExtra(KEY_DESCRIPTION, DetailActivity.this.challenge.getDescription());
+                activity_edit.putExtra(KEY_ID, DetailActivity.this.challenge.getObjectId());
 
-                startActivity(activity_edit);
+                startActivityForResult(activity_edit,REQUESTCODE);
             }
         });
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (resultCode == RESULT_OK) {
+            ParseQuery<Challenge> query = ParseQuery.getQuery(Challenge.class);
+            //fetching the updated challenge from api
+            query.getInBackground(challenge.getObjectId(), new GetCallback<Challenge>() {
+                // showing the updated challenge on this screen
+                public void done(Challenge challenge, ParseException e) {
+                    if (e == null) {
+                        Log.e(TAG, challenge + "challenge");
+                        tvTitle.setText(challenge.getTitle());
+                        tvDescription.setText(challenge.getDescription());
+                        tvCode.setText(challenge.getJoinCode());
+                        tvStartDate.setText(challenge.getStart());
+                        tvEndDate.setText(challenge.getEnd());
+                    } else {
 
+                        Log.e(TAG,"did not update");
 
+                    }
+                }
+            });
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+
+    }
 }
