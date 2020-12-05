@@ -170,7 +170,7 @@
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btnEdit"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="20dp"
