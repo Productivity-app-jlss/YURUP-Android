@@ -34,6 +34,11 @@ public class DetailActivity extends AppCompatActivity {
     public static final String KEY_ITEM_TEXT = "challenge_text";
     public static final String KEY_ITEM_POSITION = "challenge_position";
     public static final int EDIT_TEXT_CODE = 29;
+    public static final String KEY_TITLE = "challenge_title";
+    public static final String KEY_DESCRIPTION = "challenge_description";
+    public static final String KEY_START = "challenge_start";
+    public static final String KEY_END = "challenge_end";
+
 
     TextView tvTitle;
     TextView tvDescription;
@@ -44,6 +49,7 @@ public class DetailActivity extends AppCompatActivity {
     ImageView ivHost;
     Button btnEdit;
     BottomNavigationView bottomNavigationView;
+    Challenge challenge;
 
     final FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -61,13 +67,15 @@ public class DetailActivity extends AppCompatActivity {
         btnEdit = findViewById(R.id.btnEdit);
         tvStatus =findViewById(R.id.tvStatus);
 
-        Challenge challenge = Parcels.unwrap(getIntent().getParcelableExtra("challenge"));
+        this.challenge = Parcels.unwrap(getIntent().getParcelableExtra("challenge"));
         tvTitle.setText(challenge.getTitle());
         tvDescription.setText(challenge.getDescription());
         tvCode.setText(challenge.getJoinCode());
         tvStartDate.setText(challenge.getStart());
         tvEndDate.setText(challenge.getEnd());
         tvStatus.setText(challenge.getHostStatus());
+
+
 /*
         ParseUser host = challenge.getCreator();
         ParseFile image= host(User).getImage();
@@ -102,6 +110,11 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent activity_edit = new Intent(getApplicationContext(), EditActivity.class);
+                activity_edit.putExtra(KEY_TITLE, DetailActivity.this.challenge.getTitle());
+                activity_edit.putExtra(KEY_START, DetailActivity.this.challenge.getStart());
+                activity_edit.putExtra(KEY_END, DetailActivity.this.challenge.getEnd());
+                activity_edit.putExtra(KEY_DESCRIPTION, DetailActivity.this.challenge.getDescription());
+
                 startActivity(activity_edit);
             }
         });

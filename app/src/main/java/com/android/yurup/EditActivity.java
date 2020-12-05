@@ -32,29 +32,30 @@ public class EditActivity extends AppCompatActivity {
         etStartDate = findViewById(R.id.etStartDate);
         etEndDate = findViewById(R.id.etEndDate);
 
-       // Challenge challenge = Parcels.unwrap(getIntent().getParcelableExtra("challenge"));
-       // etTitle.setText(challenge.getTitle());
-        /*
-        etDescription.setText(challenge.getDescription());
-        etStartDate.setText(challenge.getStart());
-        etEndDate.setText(challenge.getEnd());
+        Intent i = getIntent();
+
+        etTitle.setText(i.getStringExtra(DetailActivity.KEY_TITLE));
+        etDescription.setText(i.getStringExtra(DetailActivity.KEY_DESCRIPTION));
+        etStartDate.setText(i.getStringExtra(DetailActivity.KEY_START));
+        etEndDate.setText(i.getStringExtra(DetailActivity.KEY_END));
+
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //create an intent to contain the result
-                //Intent intent = new Intent();
+                Intent intent = new Intent();
 
                 // pass the result
-               // intent.putExtra(DetailActivity.KEY_ITEM_TEXT, etTitle.getText().toString());
+               intent.putExtra(DetailActivity.KEY_ITEM_TEXT, etTitle.getText().toString());
 
                 //set the result of the intent
-               // setResult(RESULT_OK, intent);
+                setResult(RESULT_OK, intent);
 
                 //finish activity, close the screen and go back
                 finish();
             }
-        });*/
+        });
 
 
     }
