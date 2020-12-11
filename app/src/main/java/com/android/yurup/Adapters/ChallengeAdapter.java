@@ -13,9 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.yurup.DetailActivity;
-import com.android.yurup.EditActivity;
 import com.android.yurup.Models.Challenge;
 import com.android.yurup.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.parceler.Parcels;
 
@@ -25,6 +25,8 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
     private Context context;
     private List<Challenge> challenges;
+    public static final String TAG = "ChallengeAdapter";
+
 
     public ChallengeAdapter(Context context, List<Challenge> challenges) {
         this.context = context;
@@ -58,6 +60,8 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         TextView tvDueDate;
         View markStatus;
         LinearLayout challengeDet;
+        FloatingActionButton fabStatus;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,6 +71,8 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             tvDueDate = itemView.findViewById(R.id.tvDueDate);
             markStatus = itemView.findViewById(R.id.markStatus);
             challengeDet = itemView.findViewById(R.id.challengeDet);
+            fabStatus = itemView.findViewById(R.id.fab_status);
+
         }
 
         public void bind(final Challenge challenge) {
@@ -75,6 +81,13 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             tvStatus.setText(challenge.getHostStatus());
             tvDueDate.setText(challenge.getEnd());
 
+            if(challenge.getIsActive() == true){
+                fabStatus.setImageResource(R.drawable.ic_hourglass_top_24);
+            }
+            else{
+                fabStatus.setImageResource(R.drawable.ic_done_16);
+            }
+
             challengeDet.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -82,6 +95,42 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
                     detailChallengeIntent.putExtra("challenge", Parcels.wrap(challenge));
                     context.startActivity(detailChallengeIntent);
                     //Toast.makeText(context, "detail info", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+            fabStatus.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+//                    Intent i = new Intent();
+//                    challenge.getIsActive() = i.getBooleanExtra(challenge.getIsActive());
+                    if(challenge.getIsActive() == false){
+                        fabStatus.setImageResource(R.drawable.ic_hourglass_top_24);
+                        challenge.setIsActive(true);
+//                        challenge.saveInBackground(new SaveCallback() {
+//                            @Override
+//                            public void done(ParseException e) {
+//                                if(e != null){
+//                                    Log.e(TAG, "Update failed due to error: ", e);
+//                                    Toast.makeText(context, "Save failed", Toast.LENGTH_SHORT).show();
+//                                    return;
+//                                }
+//                                Log.e(TAG, "Update successful!");
+////                                challenge.setIsActive(false);
+////                ivPhoto.setImageResource(0);
+//                            }
+//                        });
+                        Toast.makeText(context, "Now Pending", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        fabStatus.setImageResource(R.drawable.ic_done_16);
+                        challenge.setIsActive(false);
+                        Toast.makeText(context, "Now Completed", Toast.LENGTH_SHORT).show();
+
+                    }
+
                 }
             });
 

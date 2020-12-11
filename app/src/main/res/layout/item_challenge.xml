@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -117,17 +118,29 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/yurupLineColor" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:contentDescription="@string/submit"
-                android:src="@drawable/check_circle_outline"
-                app:backgroundTint="#fff"
-                app:rippleColor="#fff" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/submit"
+        android:src="@drawable/ic_done_16"
+        android:clickable="true"
+        app:maxImageSize="30dp"
+        app:fabSize="mini"
+        app:backgroundTint="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#fff" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
 
 
