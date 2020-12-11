@@ -22,7 +22,9 @@ import com.android.yurup.Models.Challenge;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.GetCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import org.parceler.Parcels;
 
@@ -66,6 +68,8 @@ public class DetailActivity extends AppCompatActivity {
         btnEdit = findViewById(R.id.btnEdit);
         tvStatus = findViewById(R.id.tvStatus);
 
+
+
         this.challenge = Parcels.unwrap(getIntent().getParcelableExtra("challenge"));
         tvTitle.setText(challenge.getTitle());
         tvDescription.setText(challenge.getDescription());
@@ -75,13 +79,15 @@ public class DetailActivity extends AppCompatActivity {
         tvStatus.setText(challenge.getHostStatus());
 
 
+
+
 /*
         ParseUser host = challenge.getCreator();
-        ParseFile image= host(User).getImage();
+        ParseFile image= host.getImage();
         if(image != null) {
             Glide.with(this).load(image.getUrl()).into(ivHost);
-        }
-*/
+        } */
+
 
 //        fabStatus.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -157,4 +163,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
     }
+
+
 }

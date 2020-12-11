@@ -2,6 +2,7 @@ package com.android.yurup.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class HomeFragment extends Fragment {
 
     private FloatingActionButton fab_main, fab_create, fab_join;
     boolean isRotate = false;
+
 
     public HomeFragment() {
     }
@@ -108,6 +110,8 @@ public class HomeFragment extends Fragment {
         });
 
         queryChallenges();
+
+
     }
 
 

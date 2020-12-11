@@ -2,6 +2,7 @@ package com.android.yurup.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,12 @@ import com.android.yurup.DetailActivity;
 import com.android.yurup.Models.Challenge;
 import com.android.yurup.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.parse.DeleteCallback;
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 import org.parceler.Parcels;
 
@@ -87,6 +94,35 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             else{
                 fabStatus.setImageResource(R.drawable.ic_done_16);
             }
+
+//delete a challenge
+            challengeDet.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    ParseQuery<Challenge> query = ParseQuery.getQuery(Challenge.class);
+
+                    query.getInBackground(challenge.getObjectId(), new GetCallback<Challenge>() {
+                        // showing the updated challenge on this screen
+                        @Override
+                        public void done(Challenge challenge, ParseException e) {
+                            if (e == null) {
+                                    challenge.deleteInBackground(new DeleteCallback() {
+                                        @Override
+                                        public void done(ParseException e) {
+                                            if (e != null)
+                                                Log.e(TAG, "did not delete successfully", e);
+
+                                        }
+                                    });
+                                notifyDataSetChanged();
+                                Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    });
+                    return true;
+                }
+            });
 
             challengeDet.setOnClickListener(new View.OnClickListener() {
                 @Override
