@@ -1,11 +1,5 @@
 package com.android.yurup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,24 +10,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import com.android.yurup.Fragments.HomeFragment;
 import com.android.yurup.Fragments.ProfileFragment;
 import com.android.yurup.Models.Challenge;
-import com.android.yurup.Models.User;
-import com.android.yurup.challengeActivities.JoinActivity;
-import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 import com.parse.GetCallback;
 import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.parse.ParseUser;
 
 import org.parceler.Parcels;
 
-import static com.parse.Parse.getApplicationContext;
 
 public class DetailActivity extends AppCompatActivity {
     public static final String TAG = "detailActivity";
@@ -90,6 +82,16 @@ public class DetailActivity extends AppCompatActivity {
             Glide.with(this).load(image.getUrl()).into(ivHost);
         }
 */
+
+//        fabStatus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                fabStatus.setImageResource(R.drawable.ic_hourglass_top_24);
+////                Toast.makeText(DetailActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+//
+//            }
+//
+//        });
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
 
