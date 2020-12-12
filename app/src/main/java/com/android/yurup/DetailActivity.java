@@ -2,6 +2,8 @@ package com.android.yurup;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.MovementMethod;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +21,7 @@ import androidx.fragment.app.FragmentManager;
 import com.android.yurup.Fragments.HomeFragment;
 import com.android.yurup.Fragments.ProfileFragment;
 import com.android.yurup.Models.Challenge;
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.GetCallback;
 import com.parse.ParseException;
@@ -77,16 +80,10 @@ public class DetailActivity extends AppCompatActivity {
         tvStartDate.setText(challenge.getStart());
         tvEndDate.setText(challenge.getEnd());
         tvStatus.setText(challenge.getHostStatus());
-
-
-
-
-/*
-        ParseUser host = challenge.getCreator();
-        ParseFile image= host.getImage();
-        if(image != null) {
-            Glide.with(this).load(image.getUrl()).into(ivHost);
-        } */
+       // tvTitle.setMovementMethod(new ScrollingMovementMethod());
+       // tvTitle.setHorizontallyScrolling(true);
+        tvTitle.setSelected(true);
+        tvDescription.setMovementMethod(new ScrollingMovementMethod());
 
 
 //        fabStatus.setOnClickListener(new View.OnClickListener() {

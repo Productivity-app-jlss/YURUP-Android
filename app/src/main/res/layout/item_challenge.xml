@@ -40,6 +40,8 @@
                     android:layout_marginEnd="10dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="NYC Trip"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:textColor="@color/yurupThemeColor"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -53,6 +55,8 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="15dp"
                     android:fontFamily="sans-serif-medium"
+                    android:ellipsize="end"
+                    android:maxLines="2"
                     android:text="Click photos on 5 most popular NYC places"
                     android:textColor="@color/yurupThemeColor" />
 

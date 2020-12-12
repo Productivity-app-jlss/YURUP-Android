@@ -43,8 +43,8 @@ public class User extends ParseObject {
         put(KEY_EMAIL, email);
     }
 
-    public ParseFile getImage() {
-        return getParseFile(KEY_PROFILE_IMAGE);
+    public String getImage() {
+        return getParseFile(KEY_PROFILE_IMAGE).getUrl();
     }
 
     public void setImage(ParseFile image){
