@@ -26,15 +26,15 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 
 **Required Must-have Stories**
 
-- [] User login and access their information
-- [] Create a challenge/goal 
-- [] Instead of creating a challenge, user can join a created challenge with an invitation code.
-- [] Categorizing the challenges
-- [] Allow user to edit the challenge/goals details
+- [X] User login and access their information
+- [X] Create a challenge/goal 
+- [X] Instead of creating a challenge, user can join a created challenge with an invitation code.
+- [X] Allow user to edit the challenge/goals details
 - [] Set reminder and send notification to participants reminding them to keep up with their goals .
 
 **Optional Nice-to-have Stories**
 
+- [X] Delete the challenge
 - [] Create an activity page with the history of completed activities.
 - [] Badge award for the milestones
 - [] Implement a detailed timer to keep track of their challenges/goals.
@@ -43,12 +43,12 @@ YURUP, is a mobile productivity application that keeps track of the users' goals
 
 - [x] Login 
 - [x] Home Screen - a list of goals/challenges the user has been participating in. 
-   - [] User can select what goals/challenges they have completed
+   - [X] User can select what goals/challenges they have completed
 - [x] Create Challenge 
   - [X] User can create a challenge with basic information or
-  - [] User can join a challenge that has been made (with an invitation code)
+  - [X] User can join a challenge that has been made (with an invitation code)
 - [x] Profile Screen 
-  - [] Allows user to update their profile information 
+  - [X] Allows user to update their profile information 
 - [X] Activity detail Screen.
   - [X] Allows users to read more about the challenges, such as when is it due? when did it start? who is participating in this challenge? what is the code?
 
@@ -142,7 +142,7 @@ https://www.figma.com/file/wI6YONc1IOWm05iBZCx1Xl/YURUP-ANDROID-PROJECT?node-id=
   <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/main/wireframe.jpeg" width=700><br>
   
   ## Progress
-  <img src="./weekly10.gif" width=200><br>
+  <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/overall.gif" width=200><br>
   
   ### [BONUS] Digital Wireframes & Mockups
   <img src="https://github.com/Productivity-app-jlss/YURUP-Android/blob/shannon/digital%20UI%20.png" height=700>
